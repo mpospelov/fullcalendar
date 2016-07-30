@@ -140,7 +140,7 @@ var TimeGrid = FC.TimeGrid = Grid.extend(DayTableMixin, {
 		}
 
 		this.suffixLabelFormat =
-			view.opt('slotSuffixLabelForm') ||
+			view.opt('slotSuffixLabelFormat') ||
 			view.opt('smallTimeFormat');
 
 		this.labelFormat =
