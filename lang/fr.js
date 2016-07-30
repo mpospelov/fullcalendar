@@ -1,6 +1,9 @@
 
 $.fullCalendar.lang("fr", {
 	buttonText: {
+		next: "Suivant",
+		prev: "Précédent",
+		today: "Aujourd'hui",
 		year: "Année",
 		month: "Mois",
 		week: "Semaine",

@@ -87,7 +87,9 @@ var TimeGrid = FC.TimeGrid = Grid.extend(DayTableMixin, {
 						'<span>' + // for matchCellWidths
 							htmlEscape(slotDate.format(this.labelFormat)) +
 						'</span>' :
-						''
+						'<span>' +
+							htmlEscape(slotDate.format(this.suffixLabelFormat)) +
+						'</span>'
 						) +
 				'</td>';
 
@@ -136,6 +138,10 @@ var TimeGrid = FC.TimeGrid = Grid.extend(DayTableMixin, {
 		if ($.isArray(input)) {
 			input = input[input.length - 1];
 		}
+
+		this.suffixLabelFormat =
+			view.opt('slotSuffixLabelForm') ||
+			view.opt('smallTimeFormat');
 
 		this.labelFormat =
 			input ||

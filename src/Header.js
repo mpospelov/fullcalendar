@@ -5,7 +5,7 @@
 
 function Header(calendar) {
 	var t = this;
-	
+
 	// exports
 	t.render = render;
 	t.removeElement = removeElement;
@@ -16,7 +16,7 @@ function Header(calendar) {
 	t.enableButton = enableButton;
 	t.getViewsWithButtons = getViewsWithButtons;
 	t.el = null; // mirrors local `el`
-	
+
 	// locals
 	var el;
 	var viewsWithButtons = [];
@@ -46,16 +46,16 @@ function Header(calendar) {
 			removeElement();
 		}
 	}
-	
-	
+
+
 	function removeElement() {
 		if (el) {
 			el.remove();
 			el = t.el = null;
 		}
 	}
-	
-	
+
+
 	function renderSection(position) {
 		var sectionEl = $('<div class="fc-' + position + '"/>');
 		var options = calendar.options;
@@ -217,31 +217,31 @@ function Header(calendar) {
 
 		return sectionEl;
 	}
-	
-	
+
+
 	function updateTitle(text) {
 		if (el) {
 			el.find('h2').text(text);
 		}
 	}
-	
-	
+
+
 	function activateButton(buttonName) {
 		if (el) {
 			el.find('.fc-' + buttonName + '-button')
 				.addClass(tm + '-state-active');
 		}
 	}
-	
-	
+
+
 	function deactivateButton(buttonName) {
 		if (el) {
 			el.find('.fc-' + buttonName + '-button')
 				.removeClass(tm + '-state-active');
 		}
 	}
-	
-	
+
+
 	function disableButton(buttonName) {
 		if (el) {
 			el.find('.fc-' + buttonName + '-button')
@@ -249,8 +249,8 @@ function Header(calendar) {
 				.addClass(tm + '-state-disabled');
 		}
 	}
-	
-	
+
+
 	function enableButton(buttonName) {
 		if (el) {
 			el.find('.fc-' + buttonName + '-button')
