@@ -1,14 +1,11 @@
 
 beforeEach(function() {
 
-	// don't show warnings about deprecated methods like `moment.lang`, etc.
-	// at some point we'll require moment version above 2.8.
-	// until then, it's too annoying to support two versions.
-	// (not the best place for this)
-	moment.suppressDeprecationWarnings = true;
+	// HACK. PhantomJS fails otherwise
+	$.fullCalendar.Calendar.defaults.windowResizeDelay = 200;
 
 	// increase the default timeout
-	jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
+	jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
 
 
 	jasmine.addMatchers({
